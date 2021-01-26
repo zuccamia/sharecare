@@ -4,5 +4,4 @@ class Listing < ApplicationRecord
   validates :location, presence: true
   validates :fee, presence: true
   validates :service_description, presence: true
-  validates :availability, presence: true
 end
