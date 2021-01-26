@@ -1,2 +1,53 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <%= render '/shared/banner' %>
+</div>
+
+<div class="container">
+  <div class="short-card-grid">
+  <h2>Top Caregivers</h2>
+    <div class="column">
+      <div class="card">
+        <%= render 'shared/listing-card' %>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <%= render 'shared/listing-card' %>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <%= render 'shared/listing-card' %>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <%= render 'shared/listing-card' %>
+      </div>
+    </div>
+  </div>
+  <div class="short-card-grid">
+  <br>
+  <h2>Featured</h2>
+    <div class="column">
+      <div class="card">
+        <%= render 'shared/listing-card' %>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <%= render 'shared/listing-card' %>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <%= render 'shared/listing-card' %>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <%= render 'shared/listing-card' %>
+      </div>
+    </div>
+  </div>
+</div>
