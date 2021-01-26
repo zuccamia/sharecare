@@ -24,11 +24,6 @@
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
       <li class="nav-item">
         <a class="nav-link" href="#"><i class="fas fa-bars"></i></a>
       </li>
@@ -39,6 +34,11 @@
           <a class="dropdown-item" href="#">Another action</a>
         </div>
       </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </div>
