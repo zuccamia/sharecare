@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  AGE_RANGE = %w( 18-29 30-29 40-49 50-59 60-69 70+ ).freeze
+  AGE_RANGE = %w( 18-29 30-39 40-49 50-59 60-69 70+ ).freeze
 
   validates :first_name, presence: true, length: { minimum: 2, maximum: 30 }
   validates :last_name, presence: true, length: { minimum: 2, maximum: 30 }
