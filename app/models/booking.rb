@@ -7,7 +7,7 @@ class Booking < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
   validate :end_date_is_after_start_date
-  validates :status, presence: true, inclusion: { in: STATUS, message: "%{value} is not a valid status" }
+  validates :status, presence: true, inclusion: { in: STATUS }
 
   private
 
