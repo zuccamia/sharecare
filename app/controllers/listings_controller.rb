@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
   before_action :call_listing, only: [:show, :create]
   def index
-    @listings = Listing.all
+    @listings = current_user.listings
   end
 
   def show
@@ -37,6 +37,7 @@ class ListingsController < ApplicationController
   end
 
   private
+
   def call_listing
     @listing = Listing.find(params[:id])
   end
