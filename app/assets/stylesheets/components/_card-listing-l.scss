@@ -1,46 +1,52 @@
-.card-listing-l {
+.card-listings-l {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 2px rgba(0,0,0,0.2);
   height: 400px;
-
-}
-
-.picture > img {
-  height: 100%;
-  width: 440px;
-  object-fit: cover;
-}
-
-.card-listing-l-picture .profile {
-  width: 100px;
-  height: 50px;
+  width: 800px;
+  background-color: white;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  box-sizing: border-box;
   border-radius: 40px;
-  color: grey;
-  text-align: left;
-  padding: 3px;
+  margin-bottom: 16px;
 }
 
-.card-listing-l-picture .profile img {
+.background-img {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 400px;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1650&amp;q=80);
+}
+
+.profile {
   position: absolute;
-  right: 16px;
-  top: -10px;
-  width: 40px;
+  left: 16px;
+  top: 30px;
+  width: 150px;
+  height: 50px;
+  background: #FFFFFF;
+  border-radius: 50px;
 }
 
-.card-listing-l-picture .skill-tag {
-  text-align: center;
-  font-size: 9px;
+.profile-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
 }
 
-.card-listing-l .info {
-  padding: 5px;
+.profile-name {
+  vertical-align: center;
 }
 
-.locaton-tag {
-
+.info {
+  padding: 20px;
 }
 
-.card-listing-l-info p {
-
-}

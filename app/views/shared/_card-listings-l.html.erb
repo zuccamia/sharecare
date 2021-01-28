@@ -1,22 +1,22 @@
-<div class="card-listings-l">
   <% @listings.each do |listing| %>
-    <div class="picture">
-      <img src="#" alt="">
-      <div class="profile d-flex">
-        <%= image_tag "https://images.unsplash.com/photo-1534286802268-99ddb388ed4c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80", alt: "alttext" %>
-        <%= listing.user.first_name %>
+  <div class="container">
+    <div class="card-listing-l d-flex">
+      <div class="background-img">
+        <%= image_tag "https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80", class: "background-img" %>
+        <div class="profile d-flex">
+          <%= image_tag "https://images.unsplash.com/photo-1603903918985-f0cacbd0b3d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80", class: "profile-img" %>
+          <p class="profile-name"><%= listing.user.first_name %></p>
+        </div>
       </div>
-      <div class="skill-tag">
+      <div class="info">
+        <p class="location"><%= listing.location %></p>
+        <h3 class="description-heading"><%= listing.title %></h3>
+        <p class="description"><%= listing.service_description %></p>
+        <div class="d-flex justify-content-between">
+          <p><%= listing.fee %></p>
+          <%= link_to 'See details', class: "btn btn-primary" %>
+        </div>
       </div>
     </div>
-    <div class="info">
-      <p class="location"><%= listing.location %></p>
-      <h3 class="description-heading"><%= listing.title %></h3>
-      <p class="description"><%= listing.service_description %></p>
-      <div class="d-flex justify-content-between">
-        <p><%= listing.fee %></p>
-        <%= link_to 'See details', class: "btn btn-primary" %>
-      </div>
-    </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
