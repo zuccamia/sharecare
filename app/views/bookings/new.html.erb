@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card-booking">
+    <h2>Booking</h2>
+    <div class="card-booking-info">
+      <div>
+        <%= simple_form_for @booking do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.input :notes %>
+          <%= f.submit class: 'btn btn-secondary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
