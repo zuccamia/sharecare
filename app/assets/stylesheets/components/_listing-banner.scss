@@ -1,0 +1,25 @@
+.listing-banner {
+  overflow: hidden;
+  height: 400px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  border-radius: 8px;
+}
+
+.listing-photo {
+  height: 100%;
+  object-fit: cover;
+}
+
+.owner-info {
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+  position: relative;
+}
+
+.contact-btn {
+  position: absolute;
+  border-radius: 50px;
+}

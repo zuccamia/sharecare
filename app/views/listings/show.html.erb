@@ -1,0 +1,31 @@
+<div class="container mt-3">
+  <div class="row">
+    <%= render '/shared/listing-banner' %>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
+      <h2><strong>Listing title</strong></h2>
+      <br>
+      <p><strong>Description</strong></p>
+      <p><%= @listing.service_description %><p>
+    </div>
+    <div class="col">
+      <h2>Skills</h2>
+      <p>tags go here<p>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <h2>Location</h2>
+  </div>
+  <div class="row mt-2">
+  mapbox
+  </div>
+
+  <div class="row mt-5">
+    <%= link_to new_listing_booking_path(@listing), class: "btn btn-info contact-btn" do %>
+      <strong>Book this activity with <%= @listing.user.first_name %></strong>
+    <% end %>
+  </div>
+</div>
