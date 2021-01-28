@@ -39,7 +39,7 @@ end
   )
   listing.user = caregiver
   listing.save
-  puts "created a listing at #{listing.location} by #{caregiver.first_name}"
+  puts "created a listing in #{listing.location} by #{caregiver.first_name} at #{listing.fee}$ per hour"
 
   booking = Booking.new(
     start_date: DateTime.new(2021,2,3,4,5,6),
@@ -57,5 +57,6 @@ end
   client.save
   booking.listing = listing
   booking.user = client
+  booking.save
   puts "created a booking for client #{client.first_name} by #{caregiver.first_name}"
 end
