@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @listing = Listing.find(params[:listing_id])
     @booking.listing = @listing
     if @booking.save
-      redirect_to listing_booking_path, notice: 'Booking was successfully created!'
+      redirect_to listing_booking_path(@booking), notice: 'Booking was successfully created!'
     else
       render :new
     end
@@ -30,7 +30,7 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     if @booking.update(booking_params)
-      redirect_to listing_booking_path, notice: 'Booking was successfully updated.'
+      redirect_to listing_booking_path(@booking), notice: 'Booking was successfully updated.'
     else
       render :edit
     end
