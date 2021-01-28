@@ -1,0 +1,46 @@
+.card-listing-l {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  height: 400px;
+
+}
+
+.picture > img {
+  height: 100%;
+  width: 440px;
+  object-fit: cover;
+}
+
+.card-listing-l-picture .profile {
+  width: 100px;
+  height: 50px;
+  border-radius: 40px;
+  color: grey;
+  text-align: left;
+  padding: 3px;
+}
+
+.card-listing-l-picture .profile img {
+  position: absolute;
+  right: 16px;
+  top: -10px;
+  width: 40px;
+}
+
+.card-listing-l-picture .skill-tag {
+  text-align: center;
+  font-size: 9px;
+}
+
+.card-listing-l .info {
+  padding: 5px;
+}
+
+.locaton-tag {
+
+}
+
+.card-listing-l-info p {
+
+}

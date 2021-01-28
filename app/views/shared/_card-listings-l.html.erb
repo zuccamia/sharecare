@@ -13,8 +13,9 @@
       <p class="location"><%= listing.location %></p>
       <h3 class="description-heading"><%= listing.title %></h3>
       <p class="description"><%= listing.service_description %></p>
-      <div class="d-flex">
+      <div class="d-flex justify-content-between">
         <p><%= listing.fee %></p>
+        <%= link_to 'See details', class: "btn btn-primary" %>
       </div>
     </div>
   <% end %>
