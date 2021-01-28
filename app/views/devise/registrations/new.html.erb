@@ -4,6 +4,18 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :first_name,
+                required: true,
+                autofocus: true%>
+    <%= f.input :last_name,
+                required: true,
+                autofocus: true%>
+    <%= f.input :age_range,
+                collection: User::AGE_RANGE,
+                required: true%>
+    <%= f.input :languages%>
+    <%= f.input :phone_number%>
+    <%= f.input :description%>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
