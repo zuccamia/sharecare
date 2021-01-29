@@ -11,7 +11,7 @@
   background-color: white;
   margin-right: 16px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   grid-gap: 16px;
   flex-grow: 1;
 }
@@ -63,10 +63,8 @@
   padding: 10px;
   padding-right: 30px;
   color: black;
-  display: grid;
   grid-template-rows: 1fr 1fr;
   grid-gap: 3px;
-  flex-grow: 1;
 }
 
 .location {
@@ -84,7 +82,6 @@
 
 .listing-title {
   font-style: bold;
-
 }
 
 .service_description {
