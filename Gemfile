@@ -34,6 +34,7 @@ gem 'simple_form'
 
 #added gem
 gem 'pundit'
+gem 'geocoder'
 
 group :development, :test do
   gem 'pry-byebug'
