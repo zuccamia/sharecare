@@ -2,29 +2,36 @@
   <div class="row">
     <%= render '/shared/listing-banner' %>
   </div>
+</div>
 
-  <div class="row mt-5">
-    <div class="col">
-      <h2>Listing title</h2>
-      <br>
-      <p><strong>Description</strong></p>
-      <p><%= @listing.service_description %><p>
-    </div>
-    <div class="col">
-      <h2>Skills</h2>
-      <p>tags go here<p>
+<div class="container mt-3">
+  <div class="listing-info">
+    <div class="row">
+      <div class="col-sm-12 col-md-9 col-lg-9">
+        <h2>Listing title</h2>
+        <br>
+        <p><strong>Description</strong></p>
+        <p><%= @listing.service_description %><p>
+        <p><strong>Fee: </strong>$<span><%= @listing.fee %></span> per hour</p>
+        <br>
+      </div>
+      <div class="col-sm-12 col-md-9 col-lg-3">
+        <h2>Skills</h2>
+        <p>tags go here<p>
+      </div>
     </div>
   </div>
+</div>
 
-  <div class="row mt-5">
+<div class="container">
+  <div class="row">
     <h2>Location</h2>
   </div>
   <div class="row mt-2">
   mapbox
   </div>
-
-  <div class="row mt-5">
-    <%= link_to new_listing_booking_path(@listing), class: "btn btn-info contact-btn" do %>
+  <div class="row mt-3 justify-content-center">
+    <%= link_to new_listing_booking_path(@listing), class: "btn btn-info btn-round" do %>
       <strong>Book this activity with <%= @listing.user.first_name %></strong>
     <% end %>
   </div>
