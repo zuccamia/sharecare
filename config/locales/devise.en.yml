@@ -63,3 +63,5 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+
+MAPBOX_API_KEY=pk.eyJ1IjoiYXR0aW5vcmUiLCJhIjoiY2traThqdjVzMGxvdjJ2cGd5bjI0eHQ4ayJ9.nU6tZzhf1gK5ceN45svYCg

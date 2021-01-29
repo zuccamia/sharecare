@@ -1,0 +1,15 @@
+.main-container {
+  display: flex;
+  display: grid;
+  grid-template-columns: 2.8fr 1.2fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+}
+
+
+.listing-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  flex-grow: 1;
+}
