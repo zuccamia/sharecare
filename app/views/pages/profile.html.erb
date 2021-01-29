@@ -1,0 +1,29 @@
+<div class="page-wrapper">
+  <div class="row">
+    <div class="column">
+      <div class="left-column">
+        <%= image_tag "https://images.unsplash.com/photo-1534286802268-99ddb388ed4c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80", class: "avatar-large", alt: "Profile Picture" %>
+      </div>
+    </div>
+    <div class="column">
+      <div class="right-column">
+        <h1><%= @user.first_name %> <%= @user.last_name %></h1> 
+        <p><%= @user.age_range %></p>
+        <p>Language</p>
+        <% if @listing.user.nil? %> <p>"Location" %></p>
+        <% end %>
+        <br>
+        <h2>Description</h2>
+        <p>I lived in France when I was a child, and studied education in college. Even tough I work as an accountant at a cosmetics company, I love spending time with kids. On the weekend, I usually cycle around Tokyo or play tennis with friends.</p>
+        <br>
+        <h2>Contact Info</h2>
+        <% if @user.phone_number.nil? %>
+          <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
+        <% end %>
+        <br>
+        <h2>Skills</h2>
+        <p>Cooking, French, 20 years playing tennis, Outdoors, Humor</p>
+      </div>
+    </div>
+  </div>
+</div>
