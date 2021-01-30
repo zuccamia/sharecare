@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :listings do
     resources :bookings, except: [:destroy]
   end
+
+  get '/listings/:id/profile', to: 'pages#profile', as: 'caregiver_profile'
+
 end

@@ -17,9 +17,24 @@
 }
 
 .left-column {
-  background-color: #ffffff;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
 }
 
 .right-column {
+  padding: 30px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
 }
