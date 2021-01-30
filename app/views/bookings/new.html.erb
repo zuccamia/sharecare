@@ -3,7 +3,7 @@
     <h2>Booking</h2>
     <div class="card-booking-info">
       <div>
-        <%= simple_form_for @booking do |f| %>
+        <%= simple_form_for [@listing, @booking] do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
           <%= f.input :notes %>
