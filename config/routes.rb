@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   get '/listings/:id/profile', to: 'pages#profile', as: 'caregiver_profile'
 
+  get '/listings/:listing_id/bookings', to: 'bookings#show', as: 'bookings_show'
+
 end

@@ -8,8 +8,7 @@
     <div class="column">
       <div class="right-column">
         <h1><%= @user.first_name %> <%= @user.last_name %></h1> 
-        <p><%= @user.age_range %></p>
-        <p>Language</p>
+        <p><%= @user.age_range %>, <i class="fas fa-venus"></i></p>
         <% if @listing.user.nil? %> <p>"Location" %></p>
         <% end %>
         <br>
@@ -24,7 +23,7 @@
         <h2>Skills</h2>
         <p>Cooking, French, 20 years playing tennis, Outdoors, Humor</p>
         <br>
-        <%= link_to 'Return to Listing', listings_path(@listing), class: "btn btn-secondary" %>
+        <%= link_to 'Return to Listings', listings_path(@listing), class: "btn btn-secondary" %>
       </div>
     </div>
   </div>
