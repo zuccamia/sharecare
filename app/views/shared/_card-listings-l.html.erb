@@ -1,22 +1,22 @@
 <% @listings.each do |listing| %>
   <div class="card-listing-l">
-    <div class="listing-image">
-      <%= image_tag "https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80", class: "listing-image" %>
-      <div class="profile d-flex">
-        <%= image_tag "https://images.unsplash.com/photo-1603903918985-f0cacbd0b3d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80", class: "profile-img" %>
-        <div class="profile-name"><%= listing.user.first_name %>
+    <div class="listing-image-l">
+      <%= image_tag "https://images.unsplash.com/photo-1596464716127-f2a82984de30?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80", class: "listing-image-l" %>
+      <div class="profile-l d-flex">
+        <%= image_tag "https://images.unsplash.com/photo-1603903918985-f0cacbd0b3d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80", class: "profile-img-l" %>
+        <div class="profile-name-l"><%= listing.user.first_name %>
         </div>
       </div>
     </div>
-    <div class="listing-info">
-      <div class="location">
+    <div class="listing-info-l">
+      <div class="location-l">
         <p><%= listing.location %></p>
       </div>
-      <h3 class="listing-title"><%= listing.title %></h3>
-      <div class="service_description">
+      <h3 class="listing-title-l"><%= listing.title %></h3>
+      <div class="service_description-l">
         <%= listing.service_description %>
       </div>
-      <div class="listing-fee">
+      <div class="listing-fee-l">
         <p><%= listing.fee %></p>
         <%= link_to 'See details', listing_path(listing), class: "btn btn-secondary" %>
       </div>

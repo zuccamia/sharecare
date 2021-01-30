@@ -19,6 +19,7 @@ class ListingsController < ApplicationController
 
   def call_listing
     @listing = Listing.find(params[:id])
+    authorize @listing
   end
 
   def listing_params
