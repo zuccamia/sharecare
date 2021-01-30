@@ -16,12 +16,12 @@
   flex-grow: 1;
 }
 
-.listing-layout {
+.listing-layout-l {
   margin-left: 16px;
   margin-top: 16px;
 }
 
-.listing-image {
+.listing-image-l {
   flex-grow: 1;
   border-radius: 20px 0px 0px 20px;
   position: relative;
@@ -32,7 +32,7 @@
   background-position: center;
 }
 
-.profile {
+.profile-l {
   position: absolute;
   left: 16px;
   top: 30px;
@@ -43,7 +43,7 @@
   text-align: center;
 }
 
-.profile-img {
+.profile-img-l {
   width: 50px;
   height: 50px;
   object-fit: cover;
@@ -52,22 +52,22 @@
   border: white 1px solid;
 }
 
-.profile-name {
+.profile-name-l {
   padding: 12px;
   font-size: 16px;
 }
 
 
-.listing-info {
+.listing-info-l {
   position: relative;
   padding: 10px;
   padding-right: 30px;
   color: black;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-gap: 3px;
 }
 
-.location {
+.location-l {
   position: absolute;
   right: 16px;
   top: -16px;
@@ -80,17 +80,17 @@
   color: white;
 }
 
-.listing-title {
+.listing-title-l {
   font-style: bold;
 }
 
-.service_description {
+.service_description-l {
   font-size: 16px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.listing-fee {
+.listing-fee-l {
   padding-top: 60px;
   font-size: 16px;
   display: flex;
