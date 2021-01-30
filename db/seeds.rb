@@ -34,7 +34,7 @@ end
   puts "created caregiver named #{caregiver.first_name} with id #{caregiver.id}"
 
   CITIES = %w(Asakusa Shibuya Minato Aoyama Ginza Harajuku Kinshicho Nagatacho)
-  TAGS = ['cooking', 'french', 'japanese', 'korean', 'guitar', 'painting', 'craft' '20 years playing tennis', 'outdoors', 'humor', 'globe trotter']
+  TAGS = ['cooking', 'french', 'japanese', 'korean', 'guitar', 'painting', 'craft', '20 years playing tennis', 'outdoors', 'humor', 'globe trotter']
 
   listing = Listing.new(
     location: CITIES.sample,
