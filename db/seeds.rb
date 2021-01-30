@@ -33,7 +33,9 @@ end
   caregiver.save
   puts "created caregiver named #{caregiver.first_name} with id #{caregiver.id}"
 
-  CITIES = %w(Asakusa Shibuya Minato Aoyama Giza Harajuku Kinshicho Nagatacho)
+  CITIES = %w(Asakusa Shibuya Minato Aoyama Ginza Harajuku Kinshicho Nagatacho)
+  TAGS = ['cooking', 'french', 'japanese', 'korean', 'guitar', 'painting', 'craft' '20 years playing tennis', 'outdoors', 'humor', 'globe trotter']
+
   listing = Listing.new(
     location: CITIES.sample,
     fee: rand(10..25),
@@ -42,6 +44,9 @@ end
   )
   listing.user = caregiver
   listing.save
+  listing.tag_list.add(TAGS.sample(5))
+  listing.save
+
   puts "created a listing in #{listing.location} by #{caregiver.first_name} at #{listing.fee}$ per hour"
 
   booking = Booking.new(
