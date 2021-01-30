@@ -13,23 +13,23 @@ Booking.destroy_all
 
 puts "Start seeding"
 5.times do client = User.new(
-  first_name: Faker::Name.first_name,
-  last_name: Faker::Name.last_name,
-  email: Faker::Internet.email,
-  password: "test123",
-  age_range: User::AGE_RANGE.sample
-)
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: "test123",
+    age_range: User::AGE_RANGE.sample
+  )
   client.save
   puts "created client named #{client.first_name} with id #{client.id}"
 end
 
 3.times do caregiver = User.new(
-  first_name: Faker::Name.first_name,
-  last_name: Faker::Name.last_name,
-  email: Faker::Internet.email,
-  password: "test123",
-  age_range: User::AGE_RANGE.sample
-)
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: "test123",
+    age_range: User::AGE_RANGE.sample
+  )
   caregiver.save
   puts "created caregiver named #{caregiver.first_name} with id #{caregiver.id}"
   listing = Listing.new(
