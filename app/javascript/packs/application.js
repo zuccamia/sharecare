@@ -28,3 +28,9 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
 });
+
+import { initMapbox } from '../packs/map';
+
+document.addEventListener('turbolinks:load', () => {
+  initMapbox();
+})
