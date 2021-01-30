@@ -32,10 +32,13 @@ end
   )
   caregiver.save
   puts "created caregiver named #{caregiver.first_name} with id #{caregiver.id}"
+
+  CITIES = %w(Asakusa Shibuya Minato Aoyama Giza Harajuku Kinshicho Nagatacho)
   listing = Listing.new(
-    location: Faker::Address.city,
+    location: CITIES.sample,
     fee: rand(10..25),
-    service_description: Faker::Lorem.paragraph
+    service_description: Faker::Lorem.paragraph,
+    title: Faker::Marketing.buzzwords
   )
   listing.user = caregiver
   listing.save
