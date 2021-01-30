@@ -1,11 +1,7 @@
 Geocoder.configure(
   # Geocoding options
   # timeout: 3,                 # geocoding service timeout (secs)
-<<<<<<< HEAD
-  # lookup: :nominatim,         # name of geocoding service (symbol)
-=======
   lookup: :nominatim,         # name of geocoding service (symbol)
->>>>>>> 102cebba347ecdbf5189e76219a83c636bd2dda6
   # ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol)
   # language: :en,              # ISO-639 language code
   # use_https: false,           # use HTTPS for lookup requests? (if supported)
@@ -21,10 +17,6 @@ Geocoder.configure(
   # always_raise: [],
 
   # Calculation options
-<<<<<<< HEAD
-  units: :km,                 # :km for kilometers or :mi for miles
-=======
   units: :mi,                 # :km for kilometers or :mi for miles
->>>>>>> 102cebba347ecdbf5189e76219a83c636bd2dda6
   # distances: :linear          # :spherical or :linear
 )
