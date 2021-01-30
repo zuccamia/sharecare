@@ -7,4 +7,7 @@ class Listing < ApplicationRecord
   validates :title, presence: true, length: { maximum: 50 }
   validates :fee, presence: true
   validates :service_description, presence: true, length: { maximum: 500 }
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end
