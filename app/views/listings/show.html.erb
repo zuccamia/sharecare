@@ -1,0 +1,43 @@
+<div class="container mt-3">
+  <div class="row">
+    <%= render '/shared/listing-banner' %>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <div class="listing-info">
+    <div class="row">
+      <div class="col-sm-12 col-md-9 col-lg-9">
+        <h2><%= @listing.title.capitalize %></h2>
+        <br>
+        <p><strong>Description</strong></p>
+        <p><%= @listing.service_description %><p>
+        <p><strong>Fee: </strong>$<span><%= @listing.fee %></span> per hour</p>
+        <br>
+      </div>
+      <div class="col-sm-12 col-md-9 col-lg-3">
+        <h2>Skills</h2>
+        <p>tags go here<p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="row justify-content-center">
+    <%= link_to new_listing_booking_path(@listing), class: "btn btn-info btn-round" do %>
+      <strong>Book this activity with <%= @listing.user.first_name %></strong>
+    <% end %>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <h2>Location</h2>
+  </div>
+  <div class="row mt-2">
+    <div id="map"
+      style="width: 100%; height: 400px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="page-wrapper">
+  <div class="row">
+    <div class="column">
+      <div class="left-column">
+      </div>
+    </div>
+    <div class="column">
+      <div class="right-column">
+        <h1>Bookings</h1>
+        <br>
+        <% @bookings.each do |booking| %>
+        <div class="booking-list-card">
+          <%= link_to listing_path(booking.listing) do %>
+          <p>Title: <%= booking.listing.title %></p>
+          <p>Date: <%= booking.start_date %> - <%= booking.end_date %></p>
+          <p>Status: <%= booking.status %></p>
+          <% end %>
+        <% end %>
+        </div>
+        <br>
+        <br>
+        <%= link_to 'Return to Listings', listings_path, class: "btn btn-secondary" %>
+      </div>
+    </div>
+  </div>
+</div>

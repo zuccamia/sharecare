@@ -4,4 +4,9 @@ class PagesController < ApplicationController
   def home
     @listings = Listing.all
   end
+
+  def profile
+    @listing = Listing.find(params[:id])
+    @user = @listing.user
+  end
 end
