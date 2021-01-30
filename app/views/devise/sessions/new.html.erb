@@ -1,34 +1,36 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-lg-4 col-sm-12">
-      <h2>Log in</h2>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('authentication-page-background.jpg') %>'); object-fit: cover; object-position: bottom;">
+  <div class="container mt-5" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2); color: white;">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-sm-12">
+        <h2>Log in</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-sm-12">
+        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-inputs">
+            <%= f.input :email,
+                        required: false,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+            <%= f.input :password,
+                        required: false,
+                        input_html: { autocomplete: "current-password" } %>
+            <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Log in", class: "btn btn-primary block"%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-sm-12">
+        <%= render "devise/shared/links" %>
+      </div>
     </div>
   </div>
-
-  <div class="row justify-content-center">
-    <div class="col-lg-4 col-sm-12">
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-inputs">
-          <%= f.input :email,
-                      required: false,
-                      autofocus: true,
-                      input_html: { autocomplete: "email" } %>
-          <%= f.input :password,
-                      required: false,
-                      input_html: { autocomplete: "current-password" } %>
-          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        </div>
-
-        <div class="form-actions">
-          <%= f.button :submit, "Log in", class: "btn btn-primary block"%>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="row justify-content-center">
-    <div class="col-lg-4 col-sm-12">
-      <%= render "devise/shared/links" %>
-    </div>
-  </div>
-</div>
+</body>
