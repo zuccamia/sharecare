@@ -12,12 +12,12 @@
       <div class="location-l">
         <p><%= listing.location %></p>
       </div>
-      <h3 class="listing-title-l"><%= listing.title %></h3>
+      <h3 class="listing-title-l"><%= listing.title.capitalize %></h3>
       <div class="service_description-l">
         <%= listing.service_description %>
       </div>
       <div class="listing-fee-l">
-        <p><%= listing.fee %></p>
+        <p>$<%= listing.fee %> per hour</p>
         <%= link_to 'See details', listing_path(listing), class: "btn btn-secondary" %>
       </div>
     </div>
