@@ -1,0 +1,20 @@
+<% @my_listings.each do |listing| %>
+  <% if listing.bookings.nil? %>
+    <p>Wow, such empty! 👶</p>
+  <% else %>
+  <% listing.bookings.each do |booking| %>
+    <div class="booking-list-card">
+      <%= link_to listing_path(listing) do %>
+        <strong><%= booking.listing.title.capitalize %></strong>
+      <% end %>
+      <div class="booking-date">
+        <p><%= booking.start_date.to_s(:short) %></p>
+        <p><%= booking.end_date.to_s(:short) %></p>
+      </div>
+      <%= link_to root_path, class: "status" do %>
+        <%= booking.status %>
+      <% end %>
+    </div>
+  <% end %>
+  <% end %>
+<% end %>

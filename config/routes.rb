@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     resources :bookings, except: [:destroy]
   end
 
-  get '/listings/:id/profile', to: 'pages#profile', as: 'caregiver_profile'
+  get '/listings/:id/profile', to: 'pages#caregiver_profile', as: 'caregiver_profile'
+  get '/users/:id/listings', to: 'pages#by_user', as: 'user_listings'
 
-  get '/listings/:listing_id/bookings', to: 'bookings#show', as: 'bookings_show'
-
+  get '/users/:id', to: 'pages#profile', as: 'profile'
 end

@@ -1,0 +1,14 @@
+<h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+<p><%= current_user.age_range %>, <i class="fas fa-venus"></i></p>
+<% if current_user.listings %>
+  <% current_user.listings.each do |listing| %>
+  <p><%= listing.location %></p>
+  <% end %>
+<% end %>
+<h2>About me</h2>
+<p><%= current_user.description %></p>
+<br>
+<br>
+<h2>Skills</h2>
+<p>Cooking, French, 20 years playing tennis, Outdoors, Humor</p>
+<br>

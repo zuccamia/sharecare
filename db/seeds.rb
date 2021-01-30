@@ -33,7 +33,7 @@ end
   caregiver.save
   puts "created caregiver named #{caregiver.first_name} with id #{caregiver.id}"
 
-  CITIES = %w(Asakusa Shibuya Minato Aoyama Giza Harajuku Kinshicho Nagatacho)
+  CITIES = %w(Asakusa Shibuya Minato Aoyama Ginza Harajuku Kinshicho Nagatacho)
   listing = Listing.new(
     location: CITIES.sample,
     fee: rand(10..25),
