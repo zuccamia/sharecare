@@ -1,43 +1,80 @@
-<div class="container mt-3">
-  <div class="row">
-    <%= render '/shared/listing-banner' %>
-  </div>
-</div>
-
-<div class="container mt-3">
-  <div class="listing-info">
-    <div class="row">
-      <div class="col-sm-12 col-md-9 col-lg-9">
-        <h2><%= @listing.title.capitalize %></h2>
-        <br>
-        <p><strong>Description</strong></p>
-        <p><%= @listing.service_description %><p>
-        <p><strong>Fee: </strong>$<span><%= @listing.fee %></span> per hour</p>
-        <br>
-      </div>
-      <div class="col-sm-12 col-md-9 col-lg-3">
-        <h2>Skills</h2>
-        <p>tags go here<p>
+<div class="container">
+  <div class="listing-show">
+    <div class="listing-show-title">
+      <h1><%= @listing.title.capitalize %></h1>
+    </div>
+    <div class="listing-photo" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/-_QpJv4J_AA);">
+      <div class="profile-photo-full-name">
+        <%= image_tag "https://images.unsplash.com/photo-1534286802268-99ddb388ed4c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80", class: "owner-photo" %>
+        <h2 class="full-name-link">
+          <%= link_to caregiver_profile_path(@listing) do %>
+            <p><%= @listing.user.first_name %></p>
+            <p><%= @listing.user.last_name %></p>
+          <% end %>
+        </h2>
+        <div>
+          <%= link_to new_listing_booking_path(@listing), class: "btn btn-info btn-round" do %>
+            <strong>Book this activity with <%= @listing.user.first_name %></strong>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-  <div class="row justify-content-center">
-    <%= link_to new_listing_booking_path(@listing), class: "btn btn-info btn-round" do %>
-      <strong>Book this activity with <%= @listing.user.first_name %></strong>
-    <% end %>
-  </div>
-
-<div class="container">
-  <div class="row">
-    <h2>Location</h2>
-  </div>
-  <div class="row mt-2">
-    <div id="map"
+    <p></p>
+    <div class="listing-show-items">
+      <div class="listing-show-item">
+        <div class="listing-show-item-icon">
+          <h2><strong><i class="fas fa-hands-helping"></i></strong></h2>
+        </div>
+        <div class="listing-show-item-sheading">
+          <h2>Activity</h2>
+          <div class="listing-show-item-content">
+            <p><%= @listing.service_description %></p>
+          </div>
+        </div>
+      </div>
+      <div class="listing-show-items">
+        <div class="listing-show-item">
+          <div class="listing-show-item-icon">
+            <h2><strong><i class="fas fa-hand-holding-heart"></i></strong></h2>
+          </div>
+          <div class="listing-show-item-sheading">
+            <h2>Fee</h2>
+            <div class="listing-show-item-content">
+              <p><%= @listing.fee %> per hour</p>
+            </div>
+          </div>
+        </div>
+        <div class="listing-show-items">
+          <div class="listing-show-item">
+            <div class="listing-show-item-icon">
+              <h2><strong><i class="fas fa-hand-sparkles"></i></i></h2>
+            </strong></h2>
+        </div>
+        <div class="listing-show-item-sheading">
+          <h2>Skills</h2>
+          <div class="listing-show-item-content">
+            <p>tags go here</p>
+          </div>
+        </div>
+      </div>
+      <div class="listing-show-items">
+      </div>
+      <div>
+        <div class="listing-show-item">
+          <div class="listing-show-item-icon">
+            <h2><i class="fas fa-map-marked-alt"></i></h2>
+          </div>
+          <div class="listing-show-item-sheading">
+            <h2>Location</h2>
+            <div class="listing-show-item-content">
+              <p><%= @listing.location %></p>
+            </div>
+          </div>
+        </div>
+        <div id="map"
       style="width: 100%; height: 400px;"
       data-markers="<%= @markers.to_json %>"
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
     </div>
-  </div>
-</div>
