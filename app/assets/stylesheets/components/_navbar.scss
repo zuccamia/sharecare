@@ -3,6 +3,7 @@
   background: white;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   top: 0;
+  line-height: 48px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,5 +11,10 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 64px;
+}
+
+.avatar {
+  width: 64px;
+  border-radius: 50%;
 }

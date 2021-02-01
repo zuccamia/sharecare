@@ -1,38 +1,42 @@
 <div class="container">
-  <div class="listing-show">
-    <div class="listing-show-title">
-      <h1><%= @listing.title.capitalize %></h1>
-    </div>
-    <div class="listing-photo" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/-_QpJv4J_AA);">
+  <div class="listing-show-title">
+    <h1><%= @listing.title.capitalize %></h1>
+  </div>
+  <div class="listing-photo">
+    <%= image_tag "https://images.pexels.com/photos/3662630/pexels-photo-3662630.jpeg?cs=srgb&dl=pexels-cottonbro-3662630.jpg&fm=jpg", class: "listing-photo" %>
+  </div>
+  <div class="listing-content">
+    <div class="profile-booking">
       <div class="profile-photo-full-name">
-        <%= image_tag "https://images.unsplash.com/photo-1534286802268-99ddb388ed4c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80", class: "owner-photo" %>
-        <h2 class="full-name-link">
-          <%= link_to caregiver_profile_path(@listing) do %>
-            <p><%= @listing.user.first_name %></p>
-            <p><%= @listing.user.last_name %></p>
-          <% end %>
-        </h2>
-        <div>
-          <%= link_to new_listing_booking_path(@listing), class: "btn btn-info btn-round" do %>
-            <strong>Book this activity with <%= @listing.user.first_name %></strong>
-          <% end %>
+        <div class= "owner-photo">
+          <%= image_tag "https://images.unsplash.com/photo-1534286802268-99ddb388ed4c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80", class: "owner-photo" %>
+        </div>
+        <div class="full-name-link">
+          <p>
+            <%= link_to caregiver_profile_path(@listing) do %>
+              <%= @listing.user.first_name %>
+              <%= @listing.user.last_name %>
+            <% end %>
+          </p>
         </div>
       </div>
+      <div class="book-action-btn">
+        <%= link_to "Book an activity", new_listing_booking_path(@listing), class: "book-action-btn"%>
+      </div>
     </div>
-    <p></p>
-    <div class="listing-show-items">
-      <div class="listing-show-item">
-        <div class="listing-show-item-icon">
-          <h2><strong><i class="fas fa-hands-helping"></i></strong></h2>
-        </div>
-        <div class="listing-show-item-sheading">
-          <h2>Activity</h2>
-          <div class="listing-show-item-content">
-            <p><%= @listing.service_description %></p>
+    <div class="listing-content-right">
+      <div class="listing-show-items">
+        <div class="listing-show-item">
+          <div class="listing-show-item-icon">
+            <h2><strong><i class="fas fa-hands-helping"></i></strong></h2>
+          </div>
+          <div class="listing-show-item-sheading">
+            <h2>How the kids will spend time with <%= @listing.user.first_name %></h2>
+            <div class="listing-show-item-content">
+              <p><%= @listing.service_description %></p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="listing-show-items">
         <div class="listing-show-item">
           <div class="listing-show-item-icon">
             <h2><strong><i class="fas fa-hand-holding-heart"></i></strong></h2>
@@ -44,22 +48,17 @@
             </div>
           </div>
         </div>
-        <div class="listing-show-items">
-          <div class="listing-show-item">
-            <div class="listing-show-item-icon">
-              <h2><strong><i class="fas fa-hand-sparkles"></i></i></h2>
-            </strong></h2>
-        </div>
-        <div class="listing-show-item-sheading">
-          <h2>Skills</h2>
-          <div class="listing-show-item-content">
-            <p>tags go here</p>
+        <div class="listing-show-item">
+          <div class="listing-show-item-icon">
+            <h2><strong><i class="fas fa-hand-sparkles"></i></strong></h2>
+          </div>
+          <div class="listing-show-item-sheading">
+            <h2>Skills</h2>
+            <div class="listing-show-item-content">
+              <p>tags go here</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="listing-show-items">
-      </div>
-      <div>
         <div class="listing-show-item">
           <div class="listing-show-item-icon">
             <h2><i class="fas fa-map-marked-alt"></i></h2>
@@ -78,3 +77,5 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
