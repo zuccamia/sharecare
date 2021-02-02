@@ -17,9 +17,16 @@
   border-radius: 10px;
   box-shadow: 0 0 1px rgba(0,0,0,0.2);
   align-items: center;
-  justify-content: space-around;
   font-size: 16px;
   background-color: white;
+}
+
+.card-listing-l-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 
@@ -79,7 +86,7 @@
   top: 20px;
   width: 80px;
   height: 20px;
-  background: #A1A1A1;
+  background: #2A5C88;
   border-radius: 50px;
   text-align: center;
   font-size: 12px;

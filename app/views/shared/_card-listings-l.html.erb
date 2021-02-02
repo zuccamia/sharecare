@@ -16,6 +16,7 @@
         <div class="listing-fee-l">
           <p><i class="fas fa-yen-sign"></i> <%= listing.fee %> per hour</p>
         </div>
+        <%= link_to "", listing_path(listing), class: "card-listing-l-link" %>
       </div>
     </div>
   <% end %>
