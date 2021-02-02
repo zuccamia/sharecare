@@ -6,13 +6,37 @@
         <%= link_to user_listings_path(@user), class: "btn btn-secondary" do %>
           View all listings from <%= @user.first_name %>
         <% end %>
-        <% if @user.phone_number.nil? %>
+        <% if @user.phone_number %>
           <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
         <% end %>
       </div>
     </div>
     <div class="right-column p-5">
-      <%= render '/shared/user-details' %>
+      <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+      <% if @user.listings %>
+        <% @user.listings.each do |listing| %>
+        <p><%= listing.location %></p>
+        <% end %>
+      <% end %>
+      <h2>About me</h2>
+      <p><%= @user.description %></p>
+      <br>
+      <br>
+      <h2>Skills</h2>
+      <% if @user.listings.empty? %>
+        <p>You have no skill tags.</p>
+        <p><%= link_to 'Create a new listing to add new tags', new_listing_path %></p>
+      <% else %>
+        <% @user.listings.each do |listing| %>
+        <% listing.tag_list.each do |tag| %>
+          <%= link_to '#', class: "btn btn-secondary btn-round" do %>
+            <%= tag %>
+          <% end %>
+        <% end %>
+        <% end %>
+        <br>
+      <% end %>
+
       <%= link_to 'Return to the listing', listing_path(@listing), class: "btn btn-secondary" %>
     </div>
   </div>

@@ -12,7 +12,11 @@
         <p><%= booking.end_date.to_s(:short) %></p>
       </div>
       <div class="booking-status">
+      <% if booking.status == "Pending" %>
+        <p class="status"><%= booking.status %></p>
+      <% else %>
         <p class="status"><%= booking.status %>ed</p>
+      <% end %>
       </div>
     </div>
   <% end %>
