@@ -1,6 +1,6 @@
 <div class="container">
   <div class="listing-show-title">
-    <h1><%= @listing.title.capitalize %></h1>
+    <h2><%= @listing.title.capitalize %></h2>
   </div>
   <div class="listing-photo">
     <%= image_tag "https://images.pexels.com/photos/3662630/pexels-photo-3662630.jpeg?cs=srgb&dl=pexels-cottonbro-3662630.jpg&fm=jpg", class: "listing-photo" %>
@@ -13,14 +13,13 @@
         </div>
         <div class="full-name-link">
           <p>
-            <%= link_to caregiver_profile_path(@listing) do %>
-              <%= @listing.user.first_name %>
-              <%= @listing.user.last_name %>
-            <% end %>
+            <%= @listing.user.first_name %>
+            <%= @listing.user.last_name %>
           </p>
         </div>
+        <%= link_to "", caregiver_profile_path(@listing), class: "profile-photo-full-name-link" %>
       </div>
-      <div class="book-action-btn">
+      <div>
         <%= link_to "Book an activity", new_listing_booking_path(@listing), class: "book-action-btn"%>
       </div>
     </div>

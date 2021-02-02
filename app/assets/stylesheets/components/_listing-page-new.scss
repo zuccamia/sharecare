@@ -1,3 +1,7 @@
+.listing-show-title h2 {
+  padding-top: 24px;
+  padding-bottom: 12px;
+}
 .listing-photo {
   height: 400px;
   width: 100%;
@@ -5,18 +9,36 @@
   border-radius: 20px;
 }
 
-.profile-photo-full-name p {
-  text-align: center;
+.profile-photo-full-name {
+  position: relative;
+  margin-bottom: 48px;
+  background-color: white;
+  border-radius: 50px 50px 50px 50px;
+  p {
+    text-align: center;
+    padding-top: 12px;
+  }
+}
+
+.profile-photo-full-name-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .profile-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0px 24px 0px 24px;
 }
 
 .owner-photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 20px 20px 20px 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50px 50px 0px 0px;
   object-fit: cover;
 }
 
@@ -24,18 +46,21 @@
   font-size: 16px;
   text-height: 0px;
   text-align: center;
+  text-decoration: none;
 }
 
 .book-action-btn {
   color: white;
-  padding: 8px 24px;
-  border-radius: 10px;
+  padding: 16px 24px;
+  border-radius: 50px;
+  margin-top: 24px;
   background: #2A5C88;
   transition: background 0.3s ease;
 }
 
 .book-action-btn:hover {
   background: #173e60;
+  text-decoration: none;
   color: white;
 }
 
