@@ -11,7 +11,9 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
-    <%= yield %>
+    <div class="body-content">
+      <%= yield %>
+    </div>
     <%#= javascript_pack_tag 'map' %>
   </body>
 </html>

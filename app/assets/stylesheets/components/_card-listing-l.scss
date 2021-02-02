@@ -1,35 +1,49 @@
+.card-listings {
+  padding-right: 0px;
+}
+
+.sub-container {
+  margin-top: 24px;
+  margin-left: 16px;
+}
+
 .card-listing-l {
+  position: relative;
   background-size: cover;
   background-position: center;
-  height: 400px;
-  border-radius: 20px;
-  box-shadow: 0 0 1px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 22px;
-  background-color: white;
-  margin-right: 16px;
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  grid-gap: 16px;
-  flex-grow: 1;
-}
-
-.listing-layout-l {
-  margin-left: 16px;
-  margin-top: 16px;
-}
-
-.listing-image-l {
-  flex-grow: 1;
-  border-radius: 20px 0px 0px 20px;
-  position: relative;
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
+  padding: 48px 24px 24px 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 1px rgba(0,0,0,0.2);
+  align-items: center;
+  font-size: 16px;
+  background-color: white;
+}
+
+.card-listing-l-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.card-listing-l:hover {
+  background-color: #2A5C88;
+  color: white;
+}
+
+
+.card-listing-border {
+  height: 360px;
+  width: 80%;
+}
+
+.listing-layout h2 {
+  margin-top: 24px;
+  padding-left: 20px;
 }
 
 .profile-l {
@@ -44,22 +58,20 @@
 }
 
 .profile-img-l {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+  border-radius: 10px;
 }
 
 .profile-name-l {
-  padding: 12px;
+  margin-top: 4px;
   font-size: 16px;
+  text-align: center;
 }
 
 
 .listing-info-l {
-  position: relative;
   padding: 10px;
   padding-right: 30px;
   color: black;
@@ -69,11 +81,12 @@
 
 .location-l {
   position: absolute;
+  margin-right: 10px;
   right: 16px;
-  top: -16px;
+  top: 20px;
   width: 80px;
   height: 20px;
-  background: #A1A1A1;
+  background: #2A5C88;
   border-radius: 50px;
   text-align: center;
   font-size: 12px;
@@ -81,19 +94,23 @@
 }
 
 .listing-title-l {
+  margin-top: 24px;
   font-style: bold;
 }
 
 .service_description-l {
-  font-size: 16px;
+  font-size: 12px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
+.service_description-l p {
+  font-size: 12px;
+}
+
 .listing-fee-l {
   padding-top: 60px;
-  font-size: 16px;
-  display: flex;
+  text-align: right;
   justify-content: space-between;
   align-content: flex-end;
 }

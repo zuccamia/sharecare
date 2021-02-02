@@ -1,0 +1,24 @@
+<h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+<% if current_user.listings %>
+  <% current_user.listings.each do |listing| %>
+  <p><%= listing.location %></p>
+  <% end %>
+<% end %>
+<h2>About me</h2>
+<p><%= current_user.description %></p>
+<br>
+<br>
+<h2>Skills</h2>
+<% if current_user.listings.empty? %>
+  <p>You have no skill tags.</p>
+  <p><%= link_to 'Create a new listing to add new tags', new_listing_path %></p>
+<% else %>
+  <% current_user.listings.each do |listing| %>
+    <% listing.tag_list.each do |tag| %>
+    <%= link_to '#', class: "btn btn-secondary btn-round" do %>
+      <%= tag %>
+    <% end %>
+    <% end %>
+  <% end %>
+  <br>
+<% end %>

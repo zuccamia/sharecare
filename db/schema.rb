@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_01_30_172517) do
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2021_01_26_140433) do
+=======
+ActiveRecord::Schema.define(version: 2021_01_26_132523) do
+>>>>>>> master
+=======
+ActiveRecord::Schema.define(version: 2021_01_29_144909) do
+>>>>>>> 81acd51d04917436b7156d7dc700998a88661c1b
+=======
+ActiveRecord::Schema.define(version: 2021_01_30_162656) do
+>>>>>>> master
+>>>>>>> master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,10 +60,23 @@ ActiveRecord::Schema.define(version: 2021_01_30_172517) do
   end
 
   create_table "bookings", force: :cascade do |t|
+<<<<<<< HEAD
+<<<<<<< HEAD
+    t.date "start_date"
+    t.date "end_date"
+    t.string "status"
+    t.text "notes"
+=======
+=======
+>>>>>>> 81acd51d04917436b7156d7dc700998a88661c1b
     t.datetime "start_date"
     t.datetime "end_date"
     t.text "notes"
     t.string "status"
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> 81acd51d04917436b7156d7dc700998a88661c1b
     t.bigint "user_id", null: false
     t.bigint "listing_id", null: false
     t.datetime "created_at", precision: 6, null: false
