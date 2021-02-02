@@ -69,9 +69,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'geocoder'
-<<<<<<< HEAD
 gem 'cloudinary', '~> 1.16.0'
 
-=======
 gem 'acts-as-taggable-on', '~> 7.0'
->>>>>>> master
