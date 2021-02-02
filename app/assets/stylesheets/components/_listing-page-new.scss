@@ -1,0 +1,109 @@
+.listing-photo {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.profile-photo-full-name p {
+  text-align: center;
+}
+
+.profile-booking {
+  margin: 0px 24px 0px 24px;
+}
+
+.owner-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px 20px 20px 20px;
+  object-fit: cover;
+}
+
+.full-name-link a {
+  font-size: 16px;
+  text-height: 0px;
+  text-align: center;
+}
+
+.book-action-btn {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 10px;
+  background: #2A5C88;
+  transition: background 0.3s ease;
+}
+
+.book-action-btn:hover {
+  background: #173e60;
+  color: white;
+}
+
+.listing-content {
+  display: flex;
+}
+
+.listing-show-title h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.listing-show-items h2 {
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.listing-show-item {
+  margin-top: 0px !important;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.listing-show-item-sheading {
+  padding-left: 24px
+}
+
+.listing-content {
+  margin-top: 48px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  grid-gap: 32px;
+  flex-grow: 1;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .listing-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .listing-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .listing-content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .listing-content {
+    grid-template-columns: 1fr 2.5fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .listing-content {
+    grid-template-columns: 1fr 2.5fr;
+  }
+}
