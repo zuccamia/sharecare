@@ -1,9 +1,0 @@
-<div class="user-photo">
-  <%= image_tag "sakura-photo.jpg", class: "avatar-large", alt: "Profile Picture" %>
-  <% if current_user.listings %>
-    <%= link_to 'My listings', user_listings_path(current_user), class: "btn btn-secondary" %>
-  <% end %>
-  <% if current_user.phone_number.nil? %>
-    <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
-  <% end %>
-</div>
