@@ -1,50 +1,28 @@
-.listing-show-title h2 {
-  padding-top: 24px;
-  padding-bottom: 12px;
-}
-.listing-photo {
-  height: 400px;
-  width: 100%;
-  object-fit: cover;
+.profile-container {
+  width: 800px;
+  margin-top: 74px;
+  padding-top: 0px;
+  border: 1px solid grey;
   border-radius: 20px;
 }
 
-.profile-photo-full-name {
+.caregiver-photo-full-name {
   position: relative;
   margin-bottom: 48px;
   background-color: white;
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 50%;
   p {
     text-align: center;
     padding-top: 12px;
   }
 }
 
-.profile-photo-full-name-link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.profile-photo-full-name:hover {
-  background-color: #2A5C88;
-  color: white;
-}
-
-.profile-booking {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0px 24px 0px 24px;
-}
-
-.owner-photo {
+.caregiver-photo {
   width: 200px;
   height: 200px;
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 50%;
   object-fit: cover;
+  object-position: top;
 }
 
 .full-name-link a {

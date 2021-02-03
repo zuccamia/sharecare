@@ -1,73 +1,73 @@
-.page-wrapper {
-  margin: 16px;
-  padding: 0px 64px 0px 64px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  justify-content: center;
-}
+// .page-wrapper {
+//   margin: 16px;
+//   padding: 0px 64px 0px 64px;
+//   background-color: #ffffff;
+//   border-radius: 5px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   justify-content: center;
+// }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
+// .row {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   width: 100%;
+// }
 
-.right-column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
+// .right-column {
+//   display: flex;
+//   flex-direction: column;
+//   flex-basis: 100%;
+//   flex: 1;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+// }
 
-.left-column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-  justify-content: flex-start;
-  align-items: center;
-  height: 480px;
-}
+// .left-column {
+//   display: flex;
+//   flex-direction: column;
+//   flex-basis: 100%;
+//   flex: 1;
+//   justify-content: flex-start;
+//   align-items: center;
+//   height: 480px;
+// }
 
-.user-photo {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-  align-items: center;
-  justify-content: space-around;
-}
+// .user-photo {
+//   display: flex;
+//   flex-direction: column;
+//   flex-basis: 100%;
+//   flex: 1;
+//   align-items: center;
+//   justify-content: space-around;
+// }
 
-.booking-section {
-  margin-top: 72px;
-  margin-right: 0px;
-  width: 100%;
-}
+// .booking-section {
+//   margin-top: 72px;
+//   margin-right: 0px;
+//   width: 100%;
+// }
 
-.booking-list-card {
-  padding: 8px;
-  height: 100px;
-  width: 100%;
-  display: flex;
-  background-color: #b1dcec;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  justify-content: space-around;
-  align-items: center;
-}
+// .booking-list-card {
+//   padding: 8px;
+//   height: 100px;
+//   width: 100%;
+//   display: flex;
+//   background-color: #b1dcec;
+//   border-radius: 5px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   justify-content: space-around;
+//   align-items: center;
+// }
 
-.status {
-  border-radius: 50px;
-  background-color: aquamarine;
-  padding: 8px 15px;
-}
+// .status {
+//   border-radius: 50px;
+//   background-color: aquamarine;
+//   padding: 8px 15px;
+// }
 
-@media screen and (max-width: 500px) {
-  .column {
-    width: 100%;
-  }
-}
+// @media screen and (max-width: 500px) {
+//   .column {
+//     width: 100%;
+//   }
+// }
