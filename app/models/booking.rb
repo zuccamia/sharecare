@@ -1,4 +1,7 @@
 class Booking < ApplicationRecord
+  include PgSearch::Model
+  multisearchable against: %i[title location service_description first_name last_name description]
+
   belongs_to :user
   belongs_to :listing
 

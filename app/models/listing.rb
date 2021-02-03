@@ -1,4 +1,17 @@
 class Listing < ApplicationRecord
+  include PgSearch::Model
+  multisearchable against: %i[title location service_description first_name last_name description]
+# What is the difference between these two?
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: %i[title service_description location],
+    associated_against: {
+      user: %i[first_name last_name description]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
   belongs_to :user
   has_many :bookings, dependent: :destroy
   geocoded_by :location
