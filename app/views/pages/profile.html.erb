@@ -3,7 +3,7 @@
     <div class="profile-booking">
       <div class="profile-photo-full-name">
         <div class= "owner-photo">
-          <%= image_tag "sakura-photo.jpg", class: "owner-photo", alt: "Profile Picture" %>
+          <%= cl_image_tag current_user.photo.key, class: "owner-photo", alt: "Profile Picture" %>
         </div>
         <div class="full-name-link">
           <p>

@@ -3,7 +3,11 @@
     <h2><%= @listing.title.capitalize %></h2>
   </div>
   <div class="listing-photo">
-    <%= image_tag "https://images.pexels.com/photos/3662630/pexels-photo-3662630.jpeg?cs=srgb&dl=pexels-cottonbro-3662630.jpg&fm=jpg", class: "listing-photo" %>
+    <% if @listing.photo.attached? %>
+      <%= cl_image_tag @listing.photo.key, class: "listing-photo" %>
+    <% else %>
+      <%= image_tag "https://images.pexels.com/photos/3662630/pexels-photo-3662630.jpeg?cs=srgb&dl=pexels-cottonbro-3662630.jpg&fm=jpg", class: "listing-photo" %>
+    <% end %>
   </div>
   <div class="listing-content">
     <%= render 'shared/profile-booking' %>

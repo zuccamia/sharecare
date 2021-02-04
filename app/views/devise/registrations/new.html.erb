@@ -1,37 +1,54 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :first_name,
-                required: true,
-                autofocus: true%>
-    <%= f.input :last_name,
-                required: true,
-                autofocus: true%>
-    <%= f.input :age_range,
-                collection: User::AGE_RANGE,
-                required: true%>
-    <%= f.input :languages%>
-    <%= f.input :phone_number%>
-    <%= f.input :description%>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<body style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('authentication-page-background.jpg') %>'); object-fit: cover; object-position: bottom;">
+  <div class="container mt-5" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2); color: white;">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-sm-12">
+        <h2>Sign up</h2>
+      </div>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+  <div class="container" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.2); color: white;">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-sm-12">
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
 
-<%= render "devise/shared/links" %>
+        <div class="form-inputs">
+          <%= f.input :first_name,
+                      required: true,
+                      autofocus: true%>
+          <%= f.input :last_name,
+                      required: true,
+                      autofocus: true%>
+          <%= f.input :age_range,
+                      collection: User::AGE_RANGE,
+                      required: true%>
+          <%= f.input :languages%>
+          <%= f.input :phone_number%>
+          <%= f.input :description%>
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" }%>
+          <%= f.input :password,
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      input_html: { autocomplete: "new-password" } %>
+          <%= f.input :photo, as: :file %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, "Sign up", class: "btn btn-primary block" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-sm-12">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</body>

@@ -10,17 +10,17 @@
         </div>
         <div><%= booking.start_date.to_s(:short) %></div>
         <div><%= booking.end_date.to_s(:short) %></div>
-        <div><%= booking.status %></div>
         <% if booking.status == "Pending" %>
+          <div><%= booking.status %></div>
           <div>
             <%= simple_form_for status_path do |f| %>
               <%= f.hidden_field :status, name:"booking_id", value: booking.id, class: "status" %>
-              <%= f.button :submit, name: "status", value: "Accept", class: "status" %>
-              <%= f.button :submit, "Cancel", name: "status", value: "Cancel", class: "status" %>
-            <% end %>
+              <%= f.button :submit, name: "status", value: "🟢" %>
+              <%= f.button :submit, name: "status", value: "❌" %>
+            <% end %> 
           </div>
         <% else %>
-          <div><%= booking.status %>ed</div>
+          <div><%= booking.status %></div>
         <% end %>
       </div>
     <% end %>

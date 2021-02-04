@@ -13,4 +13,6 @@ class User < ApplicationRecord
   validates :last_name, presence: true, length: { minimum: 2, maximum: 30 }
   validates :password, presence: true, confirmation: true
   validates :age_range, presence: true, inclusion: { in: AGE_RANGE, message: "%{value} is not a valid age range" } 
+  has_one_attached :photo
+  validates :photo, presence: true
 end
