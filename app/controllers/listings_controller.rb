@@ -33,6 +33,7 @@ class ListingsController < ApplicationController
         lat: @listing.latitude,
         lng: @listing.longitude
     }]
+    @review = Review.new
   end
 
   private
