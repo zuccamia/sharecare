@@ -1,0 +1,6 @@
+<div>
+  <%= simple_form_for [@listing, @review] do |f| %>
+    <%= f.input :comment %>
+    <%= f.submit class: 'btn btn-secondary' %>
+  <% end %>
+</div>

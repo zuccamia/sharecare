@@ -33,6 +33,7 @@ class ListingsController < ApplicationController
         lat: @listing.latitude,
         lng: @listing.longitude
     }]
+    @review = Review.new
   end
 
   private
@@ -43,6 +44,6 @@ class ListingsController < ApplicationController
   end
 
   def listing_params
-    params.require(:listing).permit(:fee, :service_description, :location, :title, tag_list: [])
+    params.require(:listing).permit(:fee, :service_description, :location, :title, :photo, tag_list: [])
   end
 end
