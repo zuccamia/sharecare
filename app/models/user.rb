@@ -7,7 +7,7 @@ class User < ApplicationRecord
   AGE_RANGE = %w( 18-29 30-39 40-49 50-59 60-69 70+ ).freeze
 
   has_many :listings, dependent: :destroy
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
 
   validates :first_name, presence: true, length: { minimum: 2, maximum: 30 }
   validates :last_name, presence: true, length: { minimum: 2, maximum: 30 }
