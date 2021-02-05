@@ -1,20 +1,28 @@
-<% if @my_bookings.empty? %>
+  <% if @my_bookings.empty? %>
   <p>No bookings found.</p>
   <p><%= link_to 'Find a caregiver', listings_path %></p>
 <% else %>
   <% @my_bookings.each do |booking| %>
-    <div class="booking-table">
-      <%= link_to listing_path(booking.listing.id) do %>
-        <strong><%= booking.listing.title.capitalize %></strong>
-      <% end %>
-      <div><%= booking.start_date.to_s(:short) %></div>
-      <div><%= booking.end_date.to_s(:short) %></div>
-      <div class="booking-status">
-        <% if booking.status == "Pending" %>
-            <p><%= booking.status %></p>
-        <% else %>
-          <p class="status"><%= booking.status %></p>
-        <% end %>
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id=<%="heading#{booking.id.to_s}"%>>
+          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target=<%="#collapse#{booking.id.to_s}"%> aria-expanded="true" aria-controls=<%="collapse#{booking.id.to_s}"%>>
+            <div class="booking-table">
+              <div><%= link_to listing_path(booking.listing.id) do %>
+                  <strong><%= booking.listing.title.capitalize %></strong>
+                <% end %>
+              </div>
+              <div><%= booking.start_date.to_s(:short) %></div>
+              <div><%= booking.end_date.to_s(:short) %></div>
+              <div><%= booking.status %>ed</div>
+            </div>
+          </button>
+        </div>
+        <div id=<%="collapse#{booking.id.to_s}"%> class="collapse show" aria-labelledby=<%="heading#{booking.id.to_s}"%> data-parent="#accordionExample">
+          <div class="card-body">
+            <p><%= booking.notes %></p>
+          </div>
+        </div>
       </div>
     </div>
   <% end %>
