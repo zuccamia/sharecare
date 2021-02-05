@@ -16,5 +16,4 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: 'pages#profile', as: 'profile'
   post '/users/:id', to: 'bookings#update_status', as: 'status'
-#  post '/listings/:id/review', to: 'reviews#create', as: 'review'
 end
