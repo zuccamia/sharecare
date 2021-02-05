@@ -1,0 +1,17 @@
+<div class="profile-booking">
+  <div class="profile-photo-full-name">
+    <div class= "owner-photo">
+      <%= cl_image_tag @listing.user.photo.key, class: "owner-photo" %>
+    </div>
+    <div class="full-name-link">
+      <p>
+        <%= @listing.user.first_name %>
+        <%= @listing.user.last_name %>
+      </p>
+    </div>
+    <%= link_to "", caregiver_profile_path(@listing), class: "profile-photo-full-name-link" %>
+  </div>
+  <div>
+    <%= link_to "Book an activity", new_listing_booking_path(@listing), class: "book-action-btn"%>
+  </div>
+</div>

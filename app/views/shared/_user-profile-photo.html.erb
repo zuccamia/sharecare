@@ -1,5 +1,5 @@
 <div class="user-photo">
-  <%= cl_image_tag current_user.photo.key, class: "avatar-large", alt: "Profile Picture" %>
+  <%= cl_image_tag current_user.photo.key %>
   <% if current_user.listings %>
     <%= link_to 'My listings', user_listings_path(current_user), class: "btn btn-secondary" %>
   <% end %>
