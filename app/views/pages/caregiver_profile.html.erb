@@ -1,19 +1,21 @@
-<div class="page-wrapper">
-  <div class="row">
-    <div class="left-column p-5">
-      <div class="user-photo">
-        <%= cl_image_tag @user.photo.key, class: "avatar-large", alt: "Profile Picture" %>
-        <%= link_to user_listings_path(@user), class: "btn btn-secondary" do %>
-          View all listings from <%= @user.first_name %>
-        <% end %>
-        <% if @user.phone_number.nil? %>
-          <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
-        <% end %>
+<div class="container 800-container">
+  <div class="profile-content">
+    <div class="profile-booking">
+      <div class= "profile-photo-full-name">
+        <div class= "owner-photo">
+          <%= cl_image_tag @user.photo.key, class: "owner-photo", alt: "Profile Picture" %>
+        </div>
+        <div class="full-name-link">
+          <p>
+            View all listings from <%= @user.first_name %>
+          </p>
+        </div>
+        <%= link_to "", user_listings_path(@user), class: "profile-photo-full-name-link" %>
       </div>
     </div>
-    <div class="right-column p-5">
-      <%= render '/shared/user-details' %>
-      <%= link_to 'Return to the listing', listing_path(@listing), class: "btn btn-secondary" %>
+    <div class="listing-content-right">
+      <%= render '/shared/caregiver-profile' %>
+      <%= link_to 'Return to the listing', listing_path(@listing), class: "book-action-btn" %>
     </div>
   </div>
 </div>

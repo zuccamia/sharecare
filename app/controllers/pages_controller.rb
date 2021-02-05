@@ -5,6 +5,9 @@ class PagesController < ApplicationController
     @listings = Listing.all
   end
 
+  def about
+  end
+
   def caregiver_profile
     @listing = Listing.find(params[:id])
     @user = @listing.user

@@ -5,15 +5,15 @@
     </div>
     <div class="listing-show-item-sheading">
       <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+      <% if @user.phone_number.nil? %>
+        <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
+      <% end %>
+      <% if current_user.listings %>
+        <% current_user.listings.each do |listing| %>
+          <p><i class="fas fa-location-arrow"></i> <%= listing.location %></p>
+        <% end %>
+      <% end %>
       <div class="listing-show-item-content">
-        <% if current_user.phone_number.nil? %>
-          <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
-        <% end %>
-        <% if current_user.listings %>
-          <% current_user.listings.each do |listing| %>
-            <p><i class="fas fa-location-arrow"></i><%= listing.location %></p>
-          <% end %>
-        <% end %>
       </div>
     </div>
   </div>
