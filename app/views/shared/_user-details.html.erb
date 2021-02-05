@@ -10,9 +10,7 @@
           <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
         <% end %>
         <% if current_user.listings %>
-          <% current_user.listings.each do |listing| %>
-            <p><i class="fas fa-location-arrow"></i><%= listing.location %></p>
-          <% end %>
+          <%= current_user.listings.last.location %>
         <% end %>
       </div>
     </div>
