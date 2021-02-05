@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :listings do
     resources :bookings, except: [:destroy]
   end
+  
+  resources :listings do
+    resources :reviews, only: [:new, :create]
+  end
 
   get '/listings/:id/profile', to: 'pages#caregiver_profile', as: 'caregiver_profile'
   get '/users/:id/listings', to: 'pages#by_user', as: 'user_listings'
@@ -13,5 +17,5 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: 'pages#profile', as: 'profile'
   post '/users/:id', to: 'bookings#update_status', as: 'status'
-
+#  post '/listings/:id/review', to: 'reviews#create', as: 'review'
 end
