@@ -3,7 +3,7 @@
   <% if current_user.listings %>
     <%= link_to 'My listings', user_listings_path(current_user), class: "btn btn-secondary" %>
   <% end %>
-  <% if current_user.phone_number.nil? %>
+  <% if current_user.phone_number %>
     <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
   <% end %>
 </div>
