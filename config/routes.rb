@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get '/listings/:id/profile', to: 'pages#caregiver_profile', as: 'caregiver_profile'
   get '/users/:id/listings', to: 'pages#by_user', as: 'user_listings'
+  get '/about_us', to: 'pages#about_us', as: 'about_us'
 
   get '/users/:id', to: 'pages#profile', as: 'profile'
   post '/users/:id', to: 'bookings#update_status', as: 'status'

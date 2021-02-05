@@ -1,17 +1,35 @@
-<div class="page-wrapper">
-  <div class="row">
-    <div class="left-column p-5">
-      <%= render '/shared/user-profile-photo' %>
+<div class="container 800-container">
+  <div class="profile-content">
+    <div class="profile-booking">
+      <div class="profile-photo-full-name">
+        <div class= "owner-photo">
+          <%= cl_image_tag current_user.photo.key, class: "owner-photo", alt: "Profile Picture" %>
+        </div>
+        <div class="full-name-link">
+          <p>
+            <% if current_user.listings %>
+              <%= link_to 'My listings', user_listings_path(current_user) %>
+            <% end %>
+          </p>
+        </div>
+        <%= link_to "", user_listings_path(current_user), class: "profile-photo-full-name-link" %>
+      </div>
     </div>
-    <div class="right-column p-5">
+    <div class="listing-content-right">
       <%= render '/shared/user-details' %>
       <div class="booking-section">
-        <h2>Bookings received</h2>
-        <%= render '/shared/received-booking-card' %>
-      </div>
-      <div class="booking-section">
-        <h2>My bookings</h2>
-        <%= render '/shared/my-booking-card' %>
+        <ul class="nav nav-tabs bootstrap-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Booking requests</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My bookings</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><%= render '/shared/received-booking-card' %></div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><%= render '/shared/my-booking-card' %></div>
+        </div>
       </div>
     </div>
   </div>

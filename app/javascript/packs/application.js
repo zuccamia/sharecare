@@ -38,7 +38,11 @@ document.addEventListener('turbolinks:load', () => {
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 
+import { triggerTabList } from '../components/tabs';
+
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
+  triggerTabList();
 });
+
