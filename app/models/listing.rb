@@ -1,4 +1,14 @@
 class Listing < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :global_search,
+    against: %i[title service_description location fee tag_list],
+    associated_against: {
+      user: %i[first_name last_name description]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
+
   belongs_to :user
   has_many :bookings, dependent: :destroy
   has_many :reviews, dependent: :destroy
