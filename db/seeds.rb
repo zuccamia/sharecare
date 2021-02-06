@@ -7,12 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
-josette_pic = URI.open('https://res.cloudinary.com/dmk3a7sdb/image/upload/v1612454971/josette-zimmermann.jpg')
+josette_pic = URI.open('https://images.pexels.com/photos/6712450/pexels-photo-6712450.jpeg?cs=srgb&dl=pexels-anna-tarazevich-6712450.jpg&fm=jpg')
 jared_pic = URI.open('https://images.pexels.com/photos/1157395/pexels-photo-1157395.jpeg?cs=srgb&dl=pexels-josh-willink-1157395.jpg&fm=jpg')
 theo_pic = URI.open('https://images.pexels.com/photos/1484794/pexels-photo-1484794.jpeg?cs=srgb&dl=pexels-jimmy-jimmy-1484794.jpg&fm=jpg')
 taro_pic = URI.open('https://images.pexels.com/photos/937481/pexels-photo-937481.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')
 arisa_pic = URI.open('https://images.pexels.com/photos/4350172/pexels-photo-4350172.jpeg?cs=srgb&dl=pexels-ketut-subiyanto-4350172.jpg&fm=jpg')
-kyoko_pic = URI.open('https://res.cloudinary.com/dmk3a7sdb/image/upload/v1612443813/imkudqdgw3lp4n47bzv3lp0xty6n.jpg')
+kyoko_pic = URI.open('https://images.pexels.com/photos/2269739/pexels-photo-2269739.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
 marleen_pic = URI.open('https://images.pexels.com/photos/2050994/pexels-photo-2050994.jpeg?cs=srgb&dl=pexels-edu-carvalho-2050994.jpg&fm=jpg')
 coaching_pic = URI.open('https://images.pexels.com/photos/1661950/pexels-photo-1661950.jpeg?cs=srgb&dl=pexels-steshka-willems-1661950.jpg&fm=jpg')
 cooking_pic = URI.open('https://images.pexels.com/photos/12190/christmas-cookies-553457.jpg?cs=srgb&dl=pexels-pixabay-12190.jpg&fm=jpg')
