@@ -14,8 +14,13 @@
       </div>
     </div>
     <div class="listing-content-right">
+      <h2>More about the caregiver...</h2>
+      <br>
+      <br>
       <%= render '/shared/caregiver-profile' %>
-      <%= link_to 'Return to the listing', listing_path(@listing), class: "book-action-btn" %>
+      <div class="return-btn">
+        <%= link_to 'Return to the listing', listing_path(@listing), class: "book-action-btn" %>
+      </div>
     </div>
   </div>
 </div>
