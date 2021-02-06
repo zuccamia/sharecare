@@ -1,26 +1,29 @@
 <div class="container">
   <div class="listing-show-title">
-    <h1><%= @listing.title.capitalize %></h1>
+    <h2><%= @listing.title.capitalize %></h2>
   </div>
   <div class="listing-photo">
-    <%= image_tag "https://images.pexels.com/photos/3662630/pexels-photo-3662630.jpeg?cs=srgb&dl=pexels-cottonbro-3662630.jpg&fm=jpg", class: "listing-photo" %>
+    <% if @listing.photo.attached? %>
+      <%= cl_image_tag @listing.photo.key, class: "listing-photo" %>
+    <% else %>
+      <%= image_tag "https://images.pexels.com/photos/3662630/pexels-photo-3662630.jpeg?cs=srgb&dl=pexels-cottonbro-3662630.jpg&fm=jpg", class: "listing-photo" %>
+    <% end %>
   </div>
   <div class="listing-content">
     <div class="profile-booking">
       <div class="profile-photo-full-name">
         <div class= "owner-photo">
-          <%= image_tag "https://images.unsplash.com/photo-1534286802268-99ddb388ed4c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80", class: "owner-photo" %>
+          <%= cl_image_tag @listing.user.photo.key, class: "owner-photo" %>
         </div>
         <div class="full-name-link">
           <p>
-            <%= link_to caregiver_profile_path(@listing) do %>
-              <%= @listing.user.first_name %>
-              <%= @listing.user.last_name %>
-            <% end %>
+            <%= @listing.user.first_name %>
+            <%= @listing.user.last_name %>
           </p>
         </div>
+        <%= link_to "", caregiver_profile_path(@listing), class: "profile-photo-full-name-link" %>
       </div>
-      <div class="book-action-btn">
+      <div>
         <%= link_to "Book an activity", new_listing_booking_path(@listing), class: "book-action-btn"%>
       </div>
     </div>
@@ -76,6 +79,41 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
       </div>
+        <div class="listing-show-items">
+          <div class="listing-show-item">
+            <div class="listing-show-item-icon">
+              <h2><i class="fas fa-thumbs-up"></i></h2>
+            </div>
+            <div class="listing-show-item-sheading">
+              <h2>Review</h2>
+              <div class="listing-show-item-content">
+                <p>How was the activity? Write a review.</p>
+                <%= render 'shared/review-form' %>
+              </div>
+            </div>
+          </div> 
+        <div class="listing-show-item">
+          <div class="listing-show-item-icon">
+            <h2><i class="fas fa-comments"></i> </h2>
+          </div>
+          <div class="listing-show-item-sheading">
+            <h2>Recent Reviews</h2>
+            <div class="listing-show-item-content">
+                <% @listing.reviews.each do |review| %>
+              <div class="card p-3 mt-2">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="user d-flex flex-row align-items-center"> 
+                    <span><small class="font-weight-bold text-primary"><%= review.user.first_name %>: </small><br>
+                      <small class="font-weight-bold"><%= review.comment %></small></span>
+                  </div>
+                </div>
+              </div>
+                <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+

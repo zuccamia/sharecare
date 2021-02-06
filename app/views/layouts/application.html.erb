@@ -8,10 +8,13 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <title>Share Care!</title>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
   <body>
     <%= render 'shared/navbar' %>
-    <%= yield %>
+    <div class="body-content">
+      <%= yield %>
+    </div>
     <%#= javascript_pack_tag 'map' %>
   </body>
 </html>

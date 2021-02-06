@@ -1,0 +1,57 @@
+<div class="listing-show-items">
+  <div class="listing-show-item">
+    <div class="listing-show-item-icon">
+      <h2><strong><i class="fas fa-user-circle"></i></strong></h2>
+    </div>
+    <div class="listing-show-item-sheading">
+      <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+      <div class="listing-show-item-content">
+        <% if current_user.phone_number.nil? %>
+          <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
+        <% end %>
+        <% if current_user.listings %>
+          <% current_user.listings.each do |listing| %>
+            <p><i class="fas fa-location-arrow"></i><%= listing.location %></p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="listing-show-items">
+  <div class="listing-show-item">
+    <div class="listing-show-item-icon">
+      <h2><strong><i class="fas fa-signature"></i></i></strong></h2>
+  </div>
+  <div class="listing-show-item-sheading">
+    <h2>About</h2>
+    <div class="listing-show-item-content">
+      <h3><%= current_user.description %></h3>
+    </div>
+  </div>
+</div>
+<div class="listing-show-items">
+  <div class="listing-show-item">
+    <div class="listing-show-item-icon">
+      <h2><strong><i class="fas fa-hand-sparkles"></i></strong></h2>
+    </div>
+    <div class="listing-show-item-sheading">
+      <h2>Skills</h2>
+      <div class="listing-show-item-content">
+        <% if current_user.listings.empty? %>
+          <p>You have no skill tags.</p>
+          <p><%= link_to 'Create a new listing to add new tags', new_listing_path %></p>
+        <% else %>
+          <% current_user.listings.each do |listing| %>
+            <% listing.tag_list.each do |tag| %>
+              <%= link_to '#', class: "btn btn-secondary btn-round" do %>
+                <%= tag %>
+              <% end %>
+            <% end %>
+          <% end %>
+          <br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

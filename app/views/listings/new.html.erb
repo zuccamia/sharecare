@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container col-6">
   <div class="card-booking">
     <h2>How Can You Share?</h2>
     <div class="card-booking-info">
@@ -8,7 +8,8 @@
           <%= f.input :service_description %>
           <%= f.input :location %>
           <%= f.input :fee %>
-          <%= f.submit class: 'btn btn-secondary' %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit class: 'book-action-btn' %>
         <% end %>
       </div>
     </div>

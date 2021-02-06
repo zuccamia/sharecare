@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.status = "Pending"
     authorize @booking
     if @booking.save
-      redirect_to listing_bookings_path, notice: 'Booking was successfully created!'
+      redirect_to listing_booking_path(@listing, @booking), notice: 'Booking was successfully created!'
     else
       render :new
     end
@@ -26,6 +26,13 @@ class BookingsController < ApplicationController
   def show
     @booking = Booking.find(params[:id])
     authorize @booking
+  end
+
+  def update_status
+    @booking = Booking.find(params[:booking_id])
+    @booking.update(status: params[:status])
+    authorize @booking
+    redirect_to profile_path
   end
 
   def edit

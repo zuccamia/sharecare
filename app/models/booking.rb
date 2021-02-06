@@ -2,7 +2,7 @@ class Booking < ApplicationRecord
   belongs_to :user
   belongs_to :listing
 
-  STATUS = ["Accepted", "Pending", "Cancelled"]
+  STATUS = ["🟢", "Pending", "❌"]
 
   validates :start_date, presence: true
   validates :end_date, presence: true
