@@ -44,7 +44,7 @@
         <% else %>
           <% current_user.listings.each do |listing| %>
             <% listing.tag_list.each do |tag| %>
-              <%= link_to '#', class: "btn btn-secondary btn-round" do %>
+              <%= link_to listings_path(tag: tag), class: "btn btn-secondary btn-round" do %>
                 <%= tag %>
               <% end %>
             <% end %>
