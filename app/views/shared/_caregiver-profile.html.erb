@@ -4,15 +4,15 @@
       <h2><strong><i class="fas fa-user-circle"></i></strong></h2>
     </div>
     <div class="listing-show-item-sheading">
-      <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+      <h2><%= @user.first_name %> <%= @user.last_name %></h2>
       <% if @user.phone_number.nil? %>
         <p>Phone number: Verified <i class="far fa-check-circle"></i></p>
       <% end %>
-      <% if current_user.listings %>
-        <% current_user.listings.each do |listing| %>
-          <p><i class="fas fa-location-arrow"></i> <%= listing.location %></p>
+      <% if @user.listings %>
+        <p><i class="fas fa-location-arrow"></i>
+          <%= @user.listings.first.location %>
         <% end %>
-      <% end %>
+      </p>
       <div class="listing-show-item-content">
       </div>
     </div>
@@ -26,7 +26,7 @@
   <div class="listing-show-item-sheading">
     <h2>About</h2>
     <div class="listing-show-item-content">
-      <h3><%= current_user.description %></h3>
+      <p><%= @user.description %></p>
     </div>
   </div>
 </div>
@@ -38,13 +38,13 @@
     <div class="listing-show-item-sheading">
       <h2>Skills</h2>
       <div class="listing-show-item-content">
-        <% if current_user.listings.empty? %>
+        <% if @user.listings.empty? %>
           <p>You have no skill tags.</p>
           <p><%= link_to 'Create a new listing to add new tags', new_listing_path %></p>
         <% else %>
-          <% current_user.listings.each do |listing| %>
+          <% @user.listings.each do |listing| %>
             <% listing.tag_list.each do |tag| %>
-              <%= link_to listings_path(tag: tag), class: "btn btn-secondary btn-round" do %>
+              <%= link_to listings_path(tag: tag), class: "btn btn-secondary btn-sm" do %>
                 <%= tag %>
               <% end %>
             <% end %>

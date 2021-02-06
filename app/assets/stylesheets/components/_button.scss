@@ -6,8 +6,8 @@
   background: #2A5C88;
   transition: background 0.3s ease;
   border-width: 0px !important;
-    border-style: outset;
-    border-color: #F3F0E6 !important;
+  border-style: outset;
+  border-color: #F2F0E6 !important;
 }
 
 .book-action-btn:hover {
@@ -16,7 +16,18 @@
   color: white;
   border-width: 0px !important;
     border-style: outset;
-    border-color: #F3F0E6 !important;
+    border-color: #F2F0E6 !important;
 }
 
 
+.skill-tag-btn {
+  color: white;
+  padding: 8px 16px;
+  border-radius: 50px;
+  margin: 8px;
+  background: #2A5C88;
+  transition: background 0.3s ease;
+  border-width: 0px !important;
+  border-style: outset;
+  border-color: #F2F0E6 !important;
+}

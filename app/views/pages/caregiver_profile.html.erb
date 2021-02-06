@@ -7,7 +7,7 @@
         </div>
         <div class="full-name-link">
           <p>
-            View all listings from <%= @user.first_name %>
+            <%= @user.first_name %>'s listings
           </p>
         </div>
         <%= link_to "", user_listings_path(@user), class: "profile-photo-full-name-link" %>

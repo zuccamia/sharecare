@@ -91,6 +91,10 @@
   flex-grow: 1;
 }
 
+.listing-show-item-content {
+  margin-bottom: 24px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .listing-content {

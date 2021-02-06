@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.status = "Pending"
     authorize @booking
     if @booking.save
-      redirect_to listing_booking_path(@listing, @booking), notice: 'Booking was successfully created!'
+      redirect_to profile_path(current_user), notice: 'Booking was successfully created!'
     else
       render :new
     end
