@@ -1,14 +1,16 @@
 <div class="window" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://images.pexels.com/photos/3094230/pexels-photo-3094230.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);">
   <div class="container">
-    <div class="search-bar-home input-group rounded">
-      <%= form_tag listings_path, method: :get do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a caregiver"
-        %>
-        <%= submit_tag "Search", class: "btn btn-secondary" %>
-      <% end %>
+    <div class="d-flex p-2">
+      <div class="search-bar-home input-group rounded">
+        <%= form_tag listings_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find a caregiver"
+          %>
+          <%= submit_tag "Search", class: "btn btn-secondary" %>
+        <% end %>
+      </div>
     </div>
     <h1>Share Care!</h1>
     <p>Enrich your child's life with our highly skilled caregivers.</p>

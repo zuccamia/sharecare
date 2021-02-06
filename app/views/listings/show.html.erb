@@ -81,6 +81,7 @@
       </div>
         <div class="listing-show-items">
           <div class="listing-show-item">
+            <% unless current_user == @listing.user %>
             <div class="listing-show-item-icon">
               <h2><i class="fas fa-thumbs-up"></i></h2>
             </div>
@@ -91,6 +92,7 @@
                 <%= render 'shared/review-form' %>
               </div>
             </div>
+            <% end %>
           </div> 
         <div class="listing-show-item">
           <div class="listing-show-item-icon">
