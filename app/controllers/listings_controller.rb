@@ -19,6 +19,7 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(listing_params)
+    # @listing.tag_list.add(listing_params[:tag_list])
     @listing.user = current_user
     authorize @listing
     if @listing.save
@@ -44,6 +45,6 @@ class ListingsController < ApplicationController
   end
 
   def listing_params
-    params.require(:listing).permit(:fee, :service_description, :location, :title, :photo, tag_list: [])
+    params.require(:listing).permit(:fee, :service_description, :location, :title, :photo, :tag_list)
   end
 end
