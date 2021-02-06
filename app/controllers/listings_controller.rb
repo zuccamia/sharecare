@@ -4,6 +4,7 @@ class ListingsController < ApplicationController
   def index
     @listings = policy_scope(Listing)
     @listings = Listing.global_search(params[:query]) if params[:query].present?
+    @listings = Listing.tagged_with(params[:tag]) if params[:tag].present?
     @markers = @listings.geocoded.map do |listing|
       {
         lat: listing.latitude,
