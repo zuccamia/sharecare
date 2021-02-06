@@ -1,0 +1,106 @@
+.booking-table {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0px;
+  align-items: left;
+}
+
+.booking-table a:hover {
+  text-decoration: none;
+}
+
+.card-body {
+  padding: 0;
+}
+.card-body p {
+  // border: 0.5px solid #555555;
+  border-radius: 10px;
+  background-color: white;
+  padding: 12px;
+  // box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+// profile booking list nav-tab
+.nav-tabs .nav-link.active {
+  color: #495057;
+  font-weight: bold;
+  background-color: #F2F0E6;
+  border-bottom: 3px solid #555555;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.nav-tabs .nav-link {
+  color: #495057;
+  font-weight: lighter;
+  background-color: #F2F0E6;
+  border: none;
+}
+
+.nav-tabs .nav-item.show .nav-link {
+  color: #495057;
+  background-color: #F2F0E6;
+  border: none;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.nav-link {
+  padding: 8px 2px;
+  margin-right: 16px;
+}
+
+.card-header {
+  padding: 0;
+  margin-bottom: 0;
+  background-color: #F2F0E6;
+  border: none;
+}
+
+.card {
+  background-color: #fff;
+  // background-clip: border-box;
+  border: none;
+  // border-radius: 5px;
+}
+
+.card a {
+  color: #495057;
+  text-decoration: none;
+}
+
+
+.btn-link {
+    font-weight: 400;
+    color: #495057;
+    text-decoration: none;
+}
+
+.card a:hover {
+  color: #3EB6FF;
+}
+
+.btn-link:hover {
+    font-weight: 400;
+    color: #495057;
+    text-decoration: none;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #495057;
+    text-decoration: none;
+}
+
+.accordion {
+  position: relative;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin: 8px 0px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2) !important;
+}
